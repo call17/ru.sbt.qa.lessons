@@ -1,4 +1,4 @@
-package ru.sbt;
+package ru.sbt.lesson1;
 
 public class Calculator {
 
