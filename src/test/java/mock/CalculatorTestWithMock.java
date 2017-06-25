@@ -1,3 +1,5 @@
+package mock;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
