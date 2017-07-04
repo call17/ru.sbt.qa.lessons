@@ -1,9 +1,9 @@
-package ru.sbt.lesson3.model.questions;
+package ru.sbt.screenplay_example.model.questions;
 
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import ru.sbt.lesson3.model.page.MainMailPage;
+import ru.sbt.screenplay_example.model.page.MainMailPage;
 
 public class MailPageQuestions implements Question<Boolean> {
 
@@ -12,7 +12,7 @@ public class MailPageQuestions implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
 
 
-        return mainMailPage.containsElements(String.valueOf(mainMailPage.BUTTON_INBOX));
+        return mainMailPage.containsElements(".//span[text() = 'Входящие']");
     }
 
     public static Question<Boolean> displayed() {

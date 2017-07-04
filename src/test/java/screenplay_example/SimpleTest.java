@@ -1,4 +1,4 @@
-package serenity;
+package screenplay_example;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
@@ -9,9 +9,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import ru.sbt.lesson3.model.questions.MailPageQuestions;
-import ru.sbt.lesson3.model.task.AuthorizeInMail;
-import ru.sbt.lesson3.model.task.OpenMailHomePage;
+import ru.sbt.screenplay_example.model.questions.MailPageQuestions;
+import ru.sbt.screenplay_example.model.task.AuthorizeInMail;
+import ru.sbt.screenplay_example.model.task.CreateMailTask;
+import ru.sbt.screenplay_example.model.task.OpenMailHome;
 
 
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
@@ -26,7 +27,7 @@ public class SimpleTest {
     private WebDriver hisBrowser;
 
     @Steps
-    private OpenMailHomePage openTheApplication;
+    private OpenMailHome openTheApplication;
 
     @Before
     public void jamesCanBrowseTheWeb() {
@@ -39,9 +40,11 @@ public class SimpleTest {
         givenThat(vasya).wasAbleTo(openTheApplication);
 
         when(vasya).attemptsTo(AuthorizeInMail
-                .authorizeWithLoginAndPasswod("sbt.lesson.qa", "q12345678"));
+                .authorizeWithLoginAndPassword("sbt.lesson.qa", "q12345678"));
 
         then(vasya).should(seeThat(MailPageQuestions.displayed()));
+
+        then(vasya).attemptsTo(CreateMailTask.sendMailWithDescriprion("Hello","123@gmail.com"));
 
     }
 

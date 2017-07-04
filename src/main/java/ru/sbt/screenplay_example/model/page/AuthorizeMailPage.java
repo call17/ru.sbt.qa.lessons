@@ -1,4 +1,4 @@
-package ru.sbt.lesson3.model.page;
+package ru.sbt.screenplay_example.model.page;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;

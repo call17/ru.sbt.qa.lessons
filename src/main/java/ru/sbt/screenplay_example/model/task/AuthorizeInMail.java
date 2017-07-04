@@ -1,19 +1,17 @@
-package ru.sbt.lesson3.model.task;
+package ru.sbt.screenplay_example.model.task;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
 import org.openqa.selenium.Keys;
-import ru.sbt.lesson3.model.page.AuthorizeMailPage;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static ru.sbt.lesson3.model.page.AuthorizeMailPage.LOGIN_FIELD;
-import static ru.sbt.lesson3.model.page.AuthorizeMailPage.PASSWORD_FIELD;
+import static ru.sbt.screenplay_example.model.page.AuthorizeMailPage.LOGIN_FIELD;
+import static ru.sbt.screenplay_example.model.page.AuthorizeMailPage.PASSWORD_FIELD;
 
 
 public class AuthorizeInMail implements Task {
 
-    private AuthorizeMailPage loginPage;
 
     private String login;
     private String password;
@@ -39,7 +37,7 @@ public class AuthorizeInMail implements Task {
         );
     }
 
-    public static AuthorizeInMail authorizeWithLoginAndPasswod(String login, String password) {
+    public static AuthorizeInMail authorizeWithLoginAndPassword(String login, String password) {
         return instrumented(AuthorizeInMail.class, login, password);
     }
 

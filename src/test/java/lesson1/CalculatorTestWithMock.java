@@ -1,12 +1,12 @@
-package mock;
+package lesson1;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import ru.sbt.lesson2.CalcType;
-import ru.sbt.lesson2.Calculator;
+import ru.sbt.lesson1.forMock.CalcType;
+import ru.sbt.lesson1.forMock.CalculatorForMock;
 
 import static org.easymock.EasyMock.*;
 
@@ -26,11 +26,13 @@ public class CalculatorTestWithMock {
     public void testCalc1() throws Exception {
 
         // Устанаваливаем значение, возвращаемое методом getType, которое НЕ имеет реализации
-        expect(calcType.getType()).andReturn("default").times(1);
+        expect(calcType.getType())
+                .andReturn("default")
+                .times(1);
 //        // "Активация" мока
         replay(calcType);
 
-        Calculator calculator = new Calculator(calcType);
+        CalculatorForMock calculator = new CalculatorForMock(calcType);
 
         Assert.assertEquals(1, calculator.getSum(),0);
 
@@ -49,7 +51,7 @@ public class CalculatorTestWithMock {
 //        // "Активация" мока
         replay(calcType);
 
-        Calculator calculator = new Calculator(calcType);
+        CalculatorForMock calculator = new CalculatorForMock(calcType);
 
         exception.expect(Exception.class);
         exception.expectMessage("Unexpected calculator type.");

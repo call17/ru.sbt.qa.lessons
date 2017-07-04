@@ -1,13 +1,13 @@
-package ru.sbt.lesson3.model.task;
+package ru.sbt.screenplay_example.model.task;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Step;
-import ru.sbt.lesson3.model.page.AuthorizeMailPage;
+import ru.sbt.screenplay_example.model.page.AuthorizeMailPage;
 
 
-public class OpenMailHomePage implements Task {
+public class OpenMailHome implements Task {
 
     private AuthorizeMailPage yandexMailPage;
 

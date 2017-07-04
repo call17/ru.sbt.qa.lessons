@@ -1,11 +1,11 @@
-package ru.sbt.lesson2;
+package ru.sbt.lesson1.forMock;
 
 
-public class Calculator {
+public class CalculatorForMock {
 
     private ICalcType calcType;
 
-    public Calculator(ICalcType calcType){
+    public CalculatorForMock(ICalcType calcType){
 
         this.calcType = calcType;
     }

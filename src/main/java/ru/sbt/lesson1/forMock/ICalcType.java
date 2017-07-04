@@ -1,4 +1,4 @@
-package ru.sbt.lesson2;
+package ru.sbt.lesson1.forMock;
 
 
 public interface ICalcType {
