@@ -1,9 +1,9 @@
-package lesson2;
+package lesson3;
 
 
 import org.junit.Test;
-import ru.sbt.lesson2.model.PageLogin;
-import ru.sbt.lesson2.model.PageMail;
+import ru.sbt.lesson3.model.PageLogin;
+import ru.sbt.lesson3.model.PageMail;
 
 import java.io.IOException;
 

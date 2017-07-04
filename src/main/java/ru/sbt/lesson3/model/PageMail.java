@@ -1,4 +1,4 @@
-package ru.sbt.lesson2.model;
+package ru.sbt.lesson3.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

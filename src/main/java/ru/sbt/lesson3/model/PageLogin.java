@@ -1,8 +1,6 @@
-package ru.sbt.lesson2.model;
+package ru.sbt.lesson3.model;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 
 /**
